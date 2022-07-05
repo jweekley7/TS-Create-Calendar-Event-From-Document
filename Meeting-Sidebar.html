@@ -27,7 +27,7 @@
       <input type="text" id="meeting_title" name="title" value="Third Short Company Meeting"><br>
 
       <label for="meeting_description">Meeting Description:</label>
-      <textarea id="meeting_description" name="description" rows="4" cols="50"></textarea><br>
+      <textarea id="meeting_description" name="description" rows="4" cols="35"></textarea><br>
 
       <div id="meeting_location">
         <p>Meeting Location:</p>
@@ -41,16 +41,6 @@
           <input type="text" id="meeting_address" name="address">
         </div>
       </div><br>
-
-      <!-- <div>
-        <input type="checkbox" id="attach_doc" name="attachDoc" value="attach" checked/>
-        <label for="attach_doc">Attach current meeting minutes to calendar event?</label>
-      </div>
-
-      <div>
-        <input type="checkbox" id="copy_doc" name="copyDoc" value="copy" checked/>
-        <label for="copy_doc">Copy current meeting minutes and attach to calendar event as next meeting minutes template?</label>
-      </div> -->
       
       <input type="submit" value="Submit" style="margin-top: 10px">
     </form>
@@ -66,16 +56,8 @@
       document.getElementById("meeting_address_container").style.display = "none";
     }
 
-    function failureAlert(error) {
-      console.log('failureAlert running');
-      google.script.run.showFailureAlert(error);
-      console.log('error = ' + error.message); 
-    }
-
     function successAlert(successReturn) {
-      console.log('successAlert running');
       google.script.run.showSuccessAlert(successReturn);
-      //google.script.host.close();
     }
 
     document.querySelector("#meetingForm").addEventListener("submit", 
