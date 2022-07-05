@@ -22,7 +22,7 @@ function googleMeetLink(form_data) {
   return conferenceData;
 }
 
-//adds address if address is selected
+//Adds address if address is selected
 function locationAddress(form_data) {
   let location;
   
@@ -61,11 +61,13 @@ function organizeDrive(form_data) {
   console.log('organizeDrive() finished');
 }
 
+//Formats date from sidebar form into Date value
 function formatStartDate(form_data) {
   const startDateTime = new Date(form_data.date + ' '+ form_data.time);
   return startDateTime;
 }
 
+//Booking function
 async function bookNextMeeting(form_data) {
 
   showLoadingSidebar();
