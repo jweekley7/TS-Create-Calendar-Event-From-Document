@@ -11,7 +11,3 @@ function closeSidebar() {
   DocumentApp.getUi()
       .showSidebar(html);
 }
-
-function test() {
-  showLoadingSidebar();
-}
