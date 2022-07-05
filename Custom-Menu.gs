@@ -3,7 +3,6 @@ function onOpen() {
 
   ui.createMenu('Third Short Menu')
       .addItem('Book Next Meeting', 'showMeetingSidebar')
-      .addItem('test','test')
       .addToUi();
 }
 
